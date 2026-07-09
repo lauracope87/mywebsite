@@ -1,0 +1,507 @@
+/* ============================================
+   Editorial style — cream, electric blue, butter yellow
+   (Anna Schmidt-inspired)
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap');
+
+:root {
+  --cream: #f4f1ea;
+  --paper: #faf8f3;
+  --ink: #191813;
+  --muted: #7c776c;
+  --blue: #2f45e3;
+  --butter: #f6ef7c;
+  --max-width: 1080px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+::selection {
+  background: var(--butter);
+}
+
+/* ============ Masthead (giant name) ============ */
+.masthead {
+  background: var(--cream);
+  padding: 3.5rem 0 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.masthead-name {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: clamp(4.5rem, 17vw, 14.5rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  text-align: center;
+  white-space: nowrap;
+  color: var(--blue);
+  margin: 0 -0.5rem;
+}
+
+.masthead-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 1.5rem 0 3rem;
+  gap: 1rem;
+}
+
+.masthead-tagline {
+  font-size: 0.78rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  text-align: right;
+  max-width: 240px;
+  line-height: 1.9;
+}
+
+/* Sticker badges */
+.sticker {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.45rem 1.3rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform: rotate(-6deg);
+  transition: transform 0.2s ease;
+}
+
+.sticker:hover {
+  transform: rotate(3deg) scale(1.06);
+}
+
+.sticker-blue {
+  background: var(--blue);
+  color: var(--paper);
+}
+
+.sticker-yellow {
+  background: var(--butter);
+  color: var(--ink);
+  border: 1px solid var(--ink);
+}
+
+/* ============ Blue nav bar ============ */
+.navbar {
+  background: var(--blue);
+  padding: 0.85rem 0;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.navbar-brand {
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar nav a {
+  color: var(--paper);
+  text-decoration: none;
+  font-size: 0.7rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.navbar .pill {
+  background: var(--butter);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 0.35rem 1.2rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.navbar .pill:hover {
+  background: var(--paper);
+}
+
+/* ============ Type ============ */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  line-height: 1.12;
+}
+
+h2 {
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+h2 em {
+  font-style: italic;
+  text-transform: lowercase;
+  letter-spacing: 0;
+}
+
+p {
+  margin-bottom: 1rem;
+  max-width: 34rem;
+}
+
+a {
+  color: var(--blue);
+}
+
+.kicker {
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.lead {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--muted);
+}
+
+/* ============ Sections ============ */
+section {
+  padding: 5rem 0;
+}
+
+.section-paper {
+  background: var(--paper);
+  text-align: center;
+}
+
+.section-paper p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Alternating color sections */
+.section-butter {
+  background: var(--butter);
+  text-align: center;
+}
+
+.section-butter p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-butter .btn {
+  background: var(--blue);
+  color: var(--paper);
+  border-color: var(--blue);
+}
+
+.section-butter .btn:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.section-blue {
+  background: var(--blue);
+  text-align: center;
+  color: var(--paper);
+}
+
+.section-blue p {
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(250, 248, 243, 0.92);
+}
+
+.section-blue h2 {
+  color: var(--paper);
+}
+
+.section-blue h2 em {
+  color: var(--butter);
+}
+
+.section-blue a {
+  color: var(--butter);
+}
+
+.section-blue .post-list a {
+  color: var(--paper);
+}
+
+.section-blue .post-list a:hover {
+  color: var(--butter);
+}
+
+.section-blue .post-list li {
+  border-bottom-color: rgba(250, 248, 243, 0.3);
+}
+
+.section-blue .post-date {
+  color: rgba(250, 248, 243, 0.7);
+}
+
+/* Oversized full-bleed text band */
+.bleed-band {
+  background: var(--paper);
+  padding: 3rem 0 2rem;
+  overflow: hidden;
+}
+
+.bleed-band.bleed-blue {
+  background: var(--blue);
+}
+
+.bleed-blue .bleed-text {
+  color: var(--paper);
+}
+
+.bleed-text {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: clamp(3rem, 11vw, 9rem);
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-align: center;
+  letter-spacing: -0.01em;
+  margin: 0 -3rem;
+}
+
+/* ============ Buttons ============ */
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: var(--butter);
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.7rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  padding: 0.8rem 2.2rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--blue);
+  color: var(--paper);
+  border-color: var(--blue);
+}
+
+/* ============ Three-up grid ============ */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  text-align: left;
+}
+
+.grid-3 > div {
+  background: var(--paper);
+  padding: 2rem 1.5rem;
+  border: 1px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.grid-3 h3 {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  color: var(--blue);
+}
+
+.grid-3 p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ============ Blog list ============ */
+.post-list {
+  list-style: none;
+  max-width: 720px;
+  margin: 2rem auto 0;
+}
+
+.post-list li {
+  padding: 1.75rem 0;
+  border-bottom: 1px solid rgba(25, 24, 19, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.post-list a {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.post-list a:hover {
+  font-style: italic;
+  color: var(--blue);
+}
+
+.post-date {
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ============ Article ============ */
+.article {
+  background: var(--paper);
+  padding: 5rem 0;
+}
+
+.article .container {
+  max-width: 680px;
+}
+
+.article h1 {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.article h1 em {
+  font-style: italic;
+  text-transform: lowercase;
+}
+
+/* ============ Contact ============ */
+.contact-links {
+  list-style: none;
+  margin-top: 1.5rem;
+  display: inline-block;
+  text-align: left;
+}
+
+.contact-links li {
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+}
+
+/* ============ Footer ============ */
+footer {
+  background: var(--butter);
+  border-top: 1px solid var(--ink);
+  color: var(--ink);
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.7rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+footer a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+/* ============ Page hero (inner pages) ============ */
+.page-hero {
+  background: var(--cream);
+  text-align: center;
+  padding: 4.5rem 0 3.5rem;
+  overflow: hidden;
+}
+
+.page-hero h1 {
+  font-size: clamp(3rem, 10vw, 7.5rem);
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 1.25rem;
+}
+
+.page-hero h1 em {
+  font-style: italic;
+  text-transform: lowercase;
+}
+
+.page-hero p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============ Mobile ============ */
+@media (max-width: 640px) {
+  .masthead-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .masthead-tagline {
+    text-align: center;
+  }
+
+  .navbar .container {
+    justify-content: center;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 3.5rem 0;
+  }
+}
